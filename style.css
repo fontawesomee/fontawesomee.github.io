@@ -1,0 +1,113 @@
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.Achsinc {
+  width: 98%;
+  margin-top: 0%;
+  margin-left: 0%;
+  height: 50%;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.Achsinc a {
+  cursor: none;
+}
+.Achsinbungkus {
+  float: left;
+  width: 25%;
+height: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 3px;
+}
+@media screen and (max-width: 650px) {
+  .Achsinbungkus {
+    display: block;
+  }
+}
+[class*='icon'] {
+  border-radius: 0px;
+  margin: 0px;
+  text-align: center;
+  background-color: #fff;
+  border: 0.5px solid #ff000000;
+  transition: 0.5s;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.bocAchsin {
+  padding: 0 0px;
+}
+.Achinsrc-src {
+    border-radius: 50px;
+    margin-bottom: 0px;
+    margin-top: 1%;
+    width: 70%;  
+    padding:4px;
+}
+.achsin1 {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin: 0%;
+}
+.bocAchsin::after, .achsin1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.Achsincaption {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5.5%;
+}
+.nama-pengguna {
+		width:auto;
+		height :auto;
+		font-family:Arial;
+		font-weight: bold;
+		font-size:15px;
+		color:black;
+		position: absolute;
+		top:7px;
+		left:5.5%;
+		z-index: 2;
+	}
+.saldo {
+		width:auto;
+		height :auto;
+		font-family:Arial;
+		font-weight: bold;
+		font-size:15px;
+		color:#000;
+		position: absolute;
+		top:33px;
+		left:5.5%;
+		z-index: 2;
+}
+.namadeposito {
+		width:85px;
+		height:35px;
+		padding:4px;
+		font-family: Arial;
+		font-weight:bold;
+		font-size: 13px;
+		border-radius:5px;
+background-color: #009788;
+    color: #ffffff;
+		position: absolute;
+		right:20px;
+		top:15px;
+		z-index:2;
+		text-align: center;
+		line-height:27px;
+	}
