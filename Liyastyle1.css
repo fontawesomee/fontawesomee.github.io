@@ -1,0 +1,94 @@
+body, html {
+                                overflow-x: hidden;
+                                width: 100%;
+                }
+                body {
+                                padding: 0;
+                                margin: 0;
+                                }
+                .flamColorUtama {
+                    color: #26A69A;
+                }
+                #flamBackground {
+                    background: #26A69A;
+                }
+.boxx input:focus + label,
+.boxx input:valid + label,
+.boxx textarea:focus + label,
+.boxx textarea:valid + label {
+color: #056e8b;
+top: -13px;
+left: 2%;
+}
+.piol {
+    color:#00a5df;
+}
+.rig {
+    color:grey;
+}
+.boxx input:focus + label:after,
+.boxx input:valid + label:after,
+.boxx textarea:focus + label:after,
+.boxx textarea:valid + label:after {
+}
+.wrapperx label {
+position: absolute;
+top: -28.8%;
+left: 2.6%;
+color: #26A69A;
+text-decoration:none;
+background: white;
+width: 36%;
+text-align:center;
+transition: 0.3s ease-in-out;
+border-radius: 50px;
+}
+.wrapperx a {
+color: grey;
+border-radius: 50px;
+}
+.boxx2 input:focus + label,
+.boxx2 input:valid + label,
+.boxx2 textarea:focus + label,
+.boxx2 textarea:valid + label {
+color: #056e8b;
+top: -13px;
+left: 2%;
+}
+.boxx2 input:focus + label:after,
+.boxx2 input:valid + label:after,
+.boxx2 textarea:focus + label:after,
+.boxx2 textarea:valid + label:after {
+}
+.wrapperx2 label {
+position: absolute;
+top: -28.8%;
+left: 2.6%;
+color: #26A69A;
+text-decoration:none;
+background: white;
+width: 30%;
+text-align:center;
+transition: 0.3s ease-in-out;
+border-radius: 50px;
+}
+.wrapperx2 a {
+color: grey;
+border-radius: 50px;
+}
+.btn-success:hover {
+    border:1px solid grey;
+    color:grey;
+}
+.flamColorGrey {
+    color: grey;
+}
+.flamFloatRight {
+    float: right;
+}
+ .flamSetting-material-icons {
+        color: #26A69A;
+        font-size: 18.8px;
+        position: absolute;
+        top: 0px;
+    }
