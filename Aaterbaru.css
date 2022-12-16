@@ -1,0 +1,59 @@
+#kotak-header5 { 
+		width:100%;
+		height:55px;
+		background-color: #20AFA7;
+		color: #fff;
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: bold;
+		position: fixed;
+		top:0;
+		left: 0;
+		padding:10px 15%;
+		z-index: 2;
+		border-radius:0 0 0px 0px;
+	}
+	
+#kotak-header5::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0px;
+	
+	border-radius: 48%;
+	box-shadow: -20px -20px 0 #20AFA7;
+}
+#kotak-header5::after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	right: -0px;
+	
+	border-radius: 48%;
+	box-shadow: 20px -12px 0 0px #20AFA7;
+}
+.nama-pengguna5 {
+		width:auto;
+		height :auto;
+		font-family:'Open Sans';
+		font-weight: 500;
+		font-size:19px;
+		color:#fff;
+		position:fixed;
+		top:13px;
+		left:6%;
+		z-index: 3;
+	}
+/* CSS Multiple Whatsapp Chat */ #whatsapp-chat{position:fixed;background:#fff;box-shadow: 0 2px 4px 0 rgba(31, 38,135,0.37);width:350px;border-radius:10px;bottom:90px;right:10px;overflow:hidden;z-index:99;animation-name:showchat;animation-duration:1s;transform:scale(1)}
+a.blantershow-chat{background:linear-gradient(to right top,#fff,#fff);color:green;z-index:198;
+
+}a.blantershow-chat i{transform:scale(1.5);margin:0 0px 0 0}.header-chat{background:linear-gradient(to right top,#20AFA7,#18837D);color:#fff;padding:20px}.header-chat h3{margin:0 0 10px}.header-chat p{font-size:14px;line-height:1.7;margin:0}
+.info-avatar{position:relative}.info-avatar img{border-radius:100%;width:50px;float:left;padding:3px;box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);margin:0 10px 0 0}.info-avatar:before{content:'\f232';z-index:1;font-family:"Font Awesome 5 Brands";background:#23ab23;color:#fff;padding:5px 5px;border-radius:100%;position:absolute;top:30px;left:30px}a.informasi{padding:20px;display:block;overflow:hidden;animation-name:showhide;animation-duration:2.5s}a.informasi:hover{background:#fff}.info-chat span{display:block}#get-label,span.chat-label{font-size:12px;color:#000}#get-nama,span.chat-nama{margin:5px 0 0;font-size:15px;font-weight:700;color:#000}#get-label,#get-nama{color:#fff}span.my-number{display:none}
+.blanter-msg{color:#000;padding:20px;font-size:12.5px;text-align:center;border-top:1px solid #fff}textarea#chat-input{color:#000;border:none;font-family:'Arial',sans-serif;border-radius:5px;background:#ff000000;box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);width:100%;height:35px;outline:none;resize:none}
+a#send-it{color:#000;width:40px;margin:-5px 0 0 5px;font-weight:700;padding:8px;background:#ff000000;box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);border-radius:10px}
+.first-msg{background:rgb(146 151 179 / 13%);padding:30px;text-align:center}.first-msg span{background:#ff000000;color:#000;box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);font-size:14.2px;line-height:1.7;border-radius:10px;padding:15px 20px;display:inline-block}
+.start-chat .blanter-msg{display:flex}#get-number{display:none}a.close-chat{position:absolute;top:5px;right:15px;color:#fff;font-size:30px}@keyframes showhide{from{transform:scale(.5);opacity:0}}@keyframes showchat{from{transform:scale(0);opacity:0}}@media screen and (max-width:480px){#whatsapp-chat{width:auto;left:5%;right:5%;font-size:80%}}.hide{display:none;animation-name:showhide;animation-duration:1.5s;transform:scale(1);opacity:1}.show{display:block;animation-name:showhide;animation-duration:1.5s;transform:scale(1);opacity:1} 
