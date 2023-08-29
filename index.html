@@ -1,103 +1,540 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Portfolio Achsinul Umam</title>
-        <link rel="stylesheet" href="tugas3.css">
-    </head>
 
-    <body>
-        <nav>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">product</a></li>
-                <li><a href="#">gallery</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">my inventory</a></li>
-            </ul>
-        </nav>
+<head>
+  <title>Profil Ahsinul Umam tugas 7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="asset/css/styleVALUEJS.cs">
+</head>
+<style>
+  *,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
-        <section>
-            <div id="profile">
-                <div class="profile-photo">
-                    <img class="img" src="https://i.postimg.cc/sXCRB4nr/Picsart-23-06-05-23-38-17-475.png" alt="foto profil">
-                </div>
-                <div class="profile-text" style>
-                    <h1>AHSINUL UMAM</h1>
-                    <h4>Front End UI/UX Designer</h4>
-                    <div class="action">
-                        <button>Kontak</button>
-                        <button>Resume</button>
-                    </div>
-                </div>
+
+  body {
+    background-color: #f7f9fc;
+  }
+
+  /* buat css button */
+  .menu-mobile {
+    position: relative;
+    float: right;
+    display: none;
+  }
+
+  .menu-mobile a {
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #888;
+  }
+
+  /* color */
+  .bg-blue {
+    background-color: blue;
+    color: #ffffff;
+    box-shadow: 0 0 7px 0px blue;
+    border: 1px solid blue;
+  }
+
+  .bg-green {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 7px 0px green;
+    border: 1px solid green;
+  }
+
+  .border-green {
+    color: green;
+    border: 1px solid green;
+  }
+
+  /* component */
+  .text-black {
+    color: black;
+  }
+
+  .text-gray {
+    color: #888888;
+  }
+
+  .button {
+    position: relative;
+    padding: 15px 30px 15px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+    border-radius: 3px;
+  }
+
+
+  /* navbar */
+
+  nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: -1px -7px 20px 0px #888888;
+  }
+
+  nav ul {
+    position: relative;
+    top: 20px;
+    margin: 0;
+    float: right;
+    right: 10%;
+  }
+
+  nav ul li {
+    float: left;
+    display: block;
+    margin: 0px 15px 0px 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #888888;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+  nav ul li a:hover {
+    color: orange;
+  }
+
+  /* section profile */
+
+  section#box-profile {
+    position: relative;
+    width: 90%;
+    display: flex;
+    min-height: 250px;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 60px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 7px 0px rgba(136, 136, 136, 0.2);
+  }
+
+  #box-profile .img-profile {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 210px;
+    border-radius: 50px;
+    float: left;
+    top: 35px;
+    margin-left: 30px;
+  }
+
+  .img-profile .photo {
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    border-radius: 40px;
+  }
+
+  .description {
+    position: relative;
+    width: 400px;
+    display: inline-block;
+    float: left;
+    top: 50px;
+    margin-left: 60px;
+    font-family: 'Helvetica', sans-serif;
+    border-right: 1px solid #efefef;
+  }
+
+  .description h1 {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .description p {
+    color: #888888;
+  }
+
+  .description .button {
+    margin-top: 40px;
+  }
+
+  .information {
+    position: relative;
+    width: 46%;
+    display: inline-block;
+    float: right;
+    font-family: 'Helvetica', sans-serif;
+    top: 35px;
+    margin-right: 25px;
+  }
+
+  .information .data {
+    display: block;
+    width: 100%;
+    height: 36px;
+  }
+
+  .information p.field {
+    font-weight: 600;
+    width: 150px;
+    color: #333;
+  }
+
+  .information .data p {
+    float: left;
+  }
+
+
+  /* section form */
+
+  section#input-form {
+    position: relative;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 60px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 7px 0 rgba(136, 146, 146, 0.2);
+    padding: 30px;
+  }
+
+
+  /* CTO */
+  #input-form .form {
+    width: 100%;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+  }
+
+  input {
+    font-family: 'Helvetica', 'sans-serif';
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #888888;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  @media(min-width:321px) and (max-width: 400px) {
+    section#box-profile {
+      width: 90%;
+      height: 630px;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 30px;
+    }
+
+    .menu-mobile {
+      top: 20px;
+      right: 10%;
+      display: inline-block;
+    }
+
+    nav ul {
+      display: none;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      top: 43px;
+      z-index: 99;
+      background: #fff;
+    }
+
+    nav ul li {
+      float: unset;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .description {
+      padding-left: 0px;
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+      border: none;
+    }
+
+    .description .button {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .img-profile .photo {
+      left: 35px;
+      position: relative;
+    }
+
+    .information {
+      top: 75px;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+</style>
+<!-- 1Untuk mengisi perubahan pada form, maka akan bisa diterapkan pada form. 
+           Mengubah Button Contact menjadi Button Edit
+           hal 1 : memberikan identitas pada setiap Komponen pada script HTML Kita
+           jadi setiap komponen kita berikan nama/id supaya lebih mudah untuk mengubah nanti. 
+       -->
+
+<body>
+  <nav>
+    <div class="menu-mobile">
+      <!-- 2tambahkan -->
+      <a href="#" onclick="showMenu()">menu</a>
+    </div>
+    <ul id="menu">
+      <li><a href="/">HOME</a></li>
+      <li><a href="#">PRODUCT</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">INVENTORY</a></li>
+    </ul>
+  </nav>
+
+  <section id="box-profile">
+    <div class="img-profile">
+      <div class="photo"
+        style="background-image:url(https://i.postimg.cc/PJ5TNMLx/Picsart-23-06-05-23-38-17-475-1.png)">
+      </div>
+    </div>
+    <div class="description">
+      <!-- 2Pada bagian Nama tambahkan atribut ID. penting mudah diingat dan dipahami!! 
+                kemudian pada roles kasih nama prole, lalu 
+                pada button contact ubah nama menjadi EDIT lalu value pada ahref tambahkan inputform, 
+                save - debug 
+                pada saat klik edit akan mengarah ke form input.
+
+                next
+
+                kita kasih atribut onclick=editForm pada button edit 
+
+                -->
+      <h1 id="pName">Ahsinul Umam</h1>
+      <p id="pRole">Front End Designer</p>
+      <a href="#input-form" class="button bg-blue" onclick="editForm()">Edit</a>
+      <a href="#" class="button border-green">Resume</a>
+    </div>
+    <!-- 3Pada komponent class information tambahkan juga 
+                 A. id="pAvailable" pada text-gray
+                 B. id="pAvailable" pada text-gray
+                 C. id="pAvailable" pada text-gray
+                 D. id="pAvailable" pada text-gray
+
+                 Pada section Inputform kita tambahka juga masing2 input id 
+                 A. input id=inpname
+                 A. input id=inprole
+                 A. input id=inpavailability
+                 A. input id=inpage
+                 A. input id=inplocation
+                 A. input id=inpyears
+                 A. input id=inpemail
+
+                 pada tombol submit tambahkan onclik dengan function simpanform
+
+                 save.
+
+                -->
+    <div class="information">
+      <div class="data">
+        <p class="field">Availability</p>
+        <p id="pAvailable" class="text-gray">Full Time</p>
+      </div>
+      <div class="data">
+        <p class="field">Usia</p>
+        <p id="pAge" class="text-gray">24</p>
+      </div>
+      <div class="data">
+        <p class="field">Lokasi</p>
+        <p id="pLocation" class="text-gray">Indramayu</p>
+      </div>
+      <div class="data">
+        <p class="field">Pengalaman</p>
+        <p id="pExperience" class="text-gray">4</p>
+      </div>
+      <div class="data">
+        <p class="field">Email</p>
+        <p id="pEmail" class="text-gray">achsinulumam1@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="input-form">
+    <form method="#" action="#">
+      <div class="form">
+        <label>Nama</label>
+        <input id="inpName" type="text" name="nama" placeholder="masukkan nama anda">
+      </div>
+      <div class="form">
+        <label>Role</label>
+        <input id="inpRole" type="text" name="role">
+      </div>
+      <div class="form">
+        <label>Availability</label>
+        <input id="inpAvailability" type="text" name="Availability">
+      </div>
+      <div class="form">
+        <label>Usia</label>
+        <input id="inpUsia" type="number" name="usia">
+      </div>
+      <div class="form">
+        <label>Lokasi</label>
+        <input id="inpLokasi" type="text" name="lokasi">
+      </div>
+      <div class="form">
+        <label>Years Experience</label>
+        <input id="inpYears" type="number" name="experience">
+      </div>
+      <div class="form">
+        <label>Email</label>
+        <input id="inpEmail" type="email" name="email">
+      </div>
+      <div class="form">
+        <input id="simpanform" type="submit" name="submit" value="SUBMIT" class="bg-green">
+      </div>
+    </form>
+  </section>
+
+  <!-- 4Pertama kita buat sebuah variabel formenu mengarah ke id inputform.
+            kemudian formenu kita panggil , kita ubah dan style dan display menjadi none.
+            lalu save - debug
+            "Halaman Form Hilang" 138-139
+
+            5Fungsiberikutnya seperti editform line144-157 dan simpanform line148-150
+            EditForm
+            buat logika pada code menggunakan if dg kondisi awal
+            formMenu style displaynya none maka akan diubah jadi block, selain itu pada else
+            maka tampilannya tetap none.
+            simpan - debug
+
+            6Selanjutnya pada line 164 - 172menampilkan nama masuk dalam form nama dsterusnya. 
+            caranya buat sebuah variable name kita ambil value dengan id yang sudah didefinisikan tadi cth pName, kemudian ambil innerhtml nya lalu
+            pada bagian input nama pada form dg nama id InpName. document.getelementby id
+            lalu ubah value menjadi name yang berasal dari variable yang sudah dibuat diatas. 
+            save - debug
+
+            QUIZ = lakukan untuk file selanjutnya. 
+            save-debug.
+        -->
+
+
+  <script>
+    var formMenu = document.getElementById("input-form");
+            formMenu.style.display="none";
             
+            function editForm(){
+                if(formMenu.style.display === "none"){
+                    formMenu.style.display = "block";
+                }else{
+                    formMenu.style.display = "none";
+                }
 
-            <div id="detail">
-                <table>
-                    <tr>
-                        <td>Availability</td>
-                        <td>Full Time</td>
-                    </tr>
-                    <tr>
-                        <td>Usia</td>
-                        <td>24</td>
-                    </tr>
-                    <tr>
-                        <td>Lokasi</td>
-                        <td>Indramayu, Indonesia</td>
-                    </tr>
-                    <tr>
-                        <td>Pengalaman</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>achsinulumam1@gmail.com</td>
-                    </tr>
-                </table>
-            </div>
-            </div>
-        </section>
+                var name = document.getElementById("pName").innerHTML;
+                var role = document.getElementById("pRole").innerHTML;
+                var available = document.getElementById("pAvailable").innerHTML;
+                var usia = document.getElementById("pAge").innerHTML;
+                var lokasi = document.getElementById("pLocation").innerHTML;
+                var experience= document.getElementById("pExperience").innerHTML;
+                var email = document.getElementById("pEmail").innerHTML;
 
-        <section>
-            <form action="return false;">
-                <div>
-                    <label for="nama">Nama</label>
-                    <br>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="role">Role</label>
-                    <br>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="availability">Availability</label>
-                    <br>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="age">Age</label>
-                    <br>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="lokasi">Lokasi</label>
-                    <br>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="experience">Year Experience</label>
-                    <br>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <br>
-                    <input type="email">
-                </div>
+                document.getElementById("inpName").value=name;
+                document.getElementById("inpRole").value=role;
+                document.getElementById("inpAvailability").value=available;
+                document.getElementById("inpUsia").value=usia;
+                document.getElementById("inpLokasi").value=lokasi;
+                document.getElementById("inpYears").value=experience;
+                document.getElementById("inpEmail").value=email;
 
-                <input type="submit" value="SUBMIT">
-            </form>
-        </section>
+            }
+            var simpanform = document.getElementById("simpanform");
+            simpanform.addEventListener("click", function(e){
+                e.preventDefault();
+                var nama = document.getElementById("inpName");
+                var role = document.getElementById("inpRole");
+                var available = document.getElementById("inpAvailability");
+                var usia = document.getElementById("inpUsia");
+                var lokasi = document.getElementById("inpLokasi");
+                var years = document.getElementById("inpYears");
+                var email = document.getElementById("inpEmail");
+                if (nama.value == ""){
+                  alert("nama masih kosong");
+                  nama.focus();
+                  return false;
+                } else if (role.value == ""){
+                  alert("role masih kosong");
+                  role.focus();
+                  return false;
+                } else if (available.value == ""){
+                  alert("available masih kosong");
+                  available.focus();
+                  return false;
+                } else if (usia.value == ""){
+                  alert("usia masih kosong");
+                  usia.focus();
+                  return false;
+                } else if (lokasi.value == ""){
+                  alert("lokasi masih kosong");
+                  lokasi.focus();
+                  return false;
+                } else if (years.value == ""){
+                  alert("tahun masih kosong");
+                  years.focus();
+                  return false;
+                } else if (email.value == ""){
+                  alert("email masih kosong");
+                  email.focus();
+                  return false;
+                } else {
+                    if(formMenu.style.display === "block"){
+                      formMenu.style.display = "none";
+                    }else{
+                      formMenu.style.display = "block";
+                    }
+                    document.getElementById("pName").innerHTML = nama.value;
+                    document.getElementById("pRole").innerHTML = role.value;
+                    document.getElementById("pAvailable").innerHTML = available.value;
+                    document.getElementById("pAge").innerHTML = usia.value;
+                    document.getElementById("pLocation").innerHTML = lokasi.value;
+                    document.getElementById("pExperience").innerHTML = years.value;
+                    document.getElementById("pEmail").innerHTML = email.value;
+                  return false;
+                }
+            })
 
-    </body>
+            function showMenu()
+            {
+                var menu = document.getElementById("menu");
+                var box = document.getElementById("box-profile");
+
+                if(menu.style.display === "block"){
+                    menu.style.display = "none";
+                    box.style.paddingTop = "0px";
+                }else{
+                    menu.style.display = "block";
+                    box.style.paddingTop = "125px";
+                }
+            }
+  </script>
+
+</body>
+
 </html>
