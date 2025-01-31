@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Toko & Produk</title>
+</head>
+<body>
+    <h1>Tambah Toko & Produk</h1>
+
+    <label>Nama Toko:</label>
+    <input type="text" id="storeName"><br><br>
+
+    <label>Kota:</label>
+    <input type="text" id="storeCity"><br><br>
+
+    <label>Latitude:</label>
+    <input type="text" id="storeLat" readonly>
+    <button onclick="getLocation()">Dapatkan Lokasi</button><br><br>
+
+    <label>Longitude:</label>
+    <input type="text" id="storeLng" readonly><br><br>
+
+    <label>Jam Buka:</label>
+    <input type="time" id="openTime"><br><br>
+
+    <label>Jam Tutup:</label>
+    <input type="time" id="closeTime"><br><br>
+
+    <h3>Produk</h3>
+    <div id="products">
+        <div class="product">
+            <input type="text" placeholder="Nama Produk" class="productName">
+            <input type="number" placeholder="Harga" class="productPrice">
+        </div>
+    </div>
+    <button onclick="addProduct()">Tambah Produk</button><br><br>
+
+    <button onclick="submitStore()">Kirim Data</button>
+
+    <script>
+        // Fungsi untuk mendapatkan lokasi pengguna
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    document.getElementById("storeLat").value = position.coords.latitude;
+                    document.getElementById("storeLng").value = position.coords.longitude;
+                }, error => {
+                    alert("Gagal mendapatkan lokasi: " + error.message);
+                });
+            } else {
+                alert("Geolocation tidak didukung oleh browser ini.");
+            }
+        }
+
+        function addProduct() {
+            let productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+                <input type="text" placeholder="Nama Produk" class="productName">
+                <input type="number" placeholder="Harga" class="productPrice">
+                <button onclick="removeProduct(this)">Hapus</button>
+            `;
+            document.getElementById("products").appendChild(productDiv);
+        }
+
+        function removeProduct(button) {
+            button.parentElement.remove();
+        }
+
+        function submitStore() {
+            let storeData = {
+                name: document.getElementById("storeName").value,
+                city: document.getElementById("storeCity").value,
+                lat: parseFloat(document.getElementById("storeLat").value),
+                lng: parseFloat(document.getElementById("storeLng").value),
+                openTime: document.getElementById("openTime").value,
+                closeTime: document.getElementById("closeTime").value,
+                products: []
+            };
+
+            document.querySelectorAll(".product").forEach(product => {
+                let name = product.querySelector(".productName").value;
+                let price = parseFloat(product.querySelector(".productPrice").value);
+                if (name && price) {
+                    storeData.products.push({ name, price });
+                }
+            });
+
+            fetch('https://script.google.com/macros/s/AKfycbya6MF8Lm_QMNjy6eXj9XrXRTc6Uw_a-l-fPdu5eMzAXwgBIoxB4o7WcDZ7GSN5AMydig/exec', {
+                method: "POST",
+                body: JSON.stringify(storeData),
+                headers: { "Content-Type": "application/json" }
+            })
+            .then(response => response.json())
+            .then(data => alert(data.success ? "Data berhasil ditambahkan!" : "Gagal: " + data.error))
+            .catch(error => alert("Terjadi kesalahan: " + error));
+        }
+    </script>
+</body>
+</html>
