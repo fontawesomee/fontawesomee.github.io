@@ -1,0 +1,229 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('https://fontawesomee.github.io/fontachsin/Product Sans Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Product Sans';
+      background-color: #fff;
+      padding: 15px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding:0px 0px 0px 20px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .back-btn {
+      background: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .back-btn img {
+      width: 20px;
+    }
+
+    .page-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #filter-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+
+    .filter-btn {
+      padding: 6px 15px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      font-size: 16px;
+      font-family: 'Product Sans';
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .filter-btn.active {
+      background: #F99716;
+      color: white;
+      border-color: orange;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .store-card, .product-card {
+      display: flex;
+      gap: 13px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      align-items: flex-start;
+      text-decoration: none;
+      color: #000;
+      
+    }
+
+    .store-card img, .product-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .card-info {
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .card-meta {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .label {
+      background: crimson;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .rating-badge {
+      background: white;
+      padding: 0px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-top: -15px;
+      margin-left:19px;
+      width: fit-content;
+    position:absolute
+    }
+
+    .rating-badge .star {
+      color: orange;
+      font-weight: bold;
+      margin-right: 3px;
+    }
+
+    .card-image {
+      position: relative;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #666;
+      background: #fefefe;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      margin-top: 20px;
+    }
+
+    .empty-state img {
+      width: 80px;
+      margin-bottom: 15px;
+      opacity: 0.6;
+    }
+
+    .empty-state h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .empty-state p {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .loading-message {
+      display: none;
+    }
+
+    .skeleton-card {
+      display: flex;
+      gap: 15px;
+      background: #F5F3F3;
+      border-radius: 10px;
+      padding: 12px;
+      align-items: flex-start;
+      animation: pulse 1.5s infinite ease-in-out;
+      margin-bottom: 15px;
+    }
+
+    .skeleton-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 8px;
+      background: #e0e0e0;
+    }
+
+    .skeleton-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .skeleton-line {
+      height: 12px;
+      background: #e0e0e0;
+      border-radius: 6px;
+    }
+
+    .skeleton-line.short {
+      width: 50%;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
